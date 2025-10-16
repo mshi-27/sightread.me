@@ -1,0 +1,23 @@
+.home-button {
+  position: absolute;
+  top: 10vh;
+  right: 5vw;
+  height: 10vh;
+  aspect-ratio: 1 / 1;
+  background-color: #6a0dad;
+  color: #ffffff;
+  border-radius: 2vh;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 0 0;
+}
+
+.home-button:hover {
+  background-color: #550dad; /* Darker shade on hover */
+  transform: scale(1.1);
+}
+
+.home-button-icon {
+  padding-top: 5%;
+  width: auto;
+  height: 90%;
+}

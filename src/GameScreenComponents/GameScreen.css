@@ -1,0 +1,121 @@
+body {
+  overflow-y: hidden;
+}
+
+.metronome-container {
+  opacity: 0;
+}
+
+.game-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10vw;
+}
+
+.below-notes-container-start-button {
+  position: absolute;
+  top: 70vh;
+  z-index: 0;
+}
+
+.below-notes-container {
+  position: absolute;
+  top: 70vh;
+  z-index: -1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-display {
+  font-size: 6vh;
+  font-weight: bold;
+}
+
+.score-display {
+  position: absolute;
+  bottom: 80vh;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  margin-top: 10vh;
+  font-size: 10vh;
+  font-weight: bold;
+}
+
+.score-display-score {
+  color: #6a0dad;
+}
+.countdown-display {
+  font-size: 8vh;
+  margin-bottom: 2vh;
+  z-index: -1000000;
+  margin-left: 15vh;
+}
+.strikes-display {
+  font-size: 10vh;
+  font-weight: bold;
+  z-index: -1000;
+}
+.fade-in {
+  opacity: 1;
+}
+
+.colored-Xs {
+  color: #6a0dad;
+}
+
+.empty-Xs {
+  color: #cdbcd3;
+}
+.note {
+  display: inline-block;
+  margin-right: 0;
+}
+
+.viewport {
+  position: absolute;
+  top: 25vh;
+  width: 150vh;
+  height: 55vh; /* Measure height is 230 for good fit */
+  /* VexFlow code is based on 400 px per measure, change it to adapt to screen width */
+  overflow: hidden;
+  align-self: center;
+  margin-left: -10vw;
+}
+
+.viewport.review-mode {
+  overflow-x: auto;
+}
+
+.review-mode-play-again-button {
+  visibility: hidden;
+  position: absolute;
+  right: 15vw;
+  top: 10vh;
+  background-color: #6a0dad;
+  height: 10vh;
+  font-size: 6vh;
+  width: 20vw;
+  border-radius: 2vh;
+  border: none;
+  color: #ffffff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.review-mode-play-again-button.show {
+  visibility: visible;
+}
+
+.review-mode-play-again-button:hover {
+  background-color: #550dad;
+  transform: scale(1.05);
+}
+
+#sheet-music {
+  width: 3200px; /* 4 times the viewport width for 8 measures */
+}
+
+.audio-canvas {
+  position: absolute;
+  inset: 0;
+}

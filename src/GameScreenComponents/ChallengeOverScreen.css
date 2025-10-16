@@ -1,0 +1,82 @@
+.challenge-over-container {
+  overflow-y: hidden;
+}
+
+.challenge-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.challenge-over-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.challenge-over-content {
+  flex: 1;
+  position: absolute;
+  top: 100vh;
+  left: 20vw;
+  width: 60vw;
+  height: 80vh;
+  border-radius: 5vh;
+  border: 1vh solid #000000;
+  background-color: #dddddd;
+  opacity: 1;
+  visibility: visible;
+  transition: top 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001;
+  box-sizing: border-box;
+}
+
+.challenge-over-content.show {
+  top: 10vh;
+}
+
+.challenge-over-title {
+  padding: 2vh;
+  font-size: 10vh;
+  font-weight: bold;
+}
+.challenge-over-score {
+  color: #6a0dad;
+  font-size: 6vh;
+  font-weight: bold;
+  padding-bottom: 2vh;
+}
+
+.challenge-over-button {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5vh;
+  width: 40vw;
+  border-radius: 2vh;
+  color: #ffffff;
+  font-size: 6vh;
+  background-color: #6a0dad;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.challenge-over-button:hover {
+  transform: scale(1.1);
+}

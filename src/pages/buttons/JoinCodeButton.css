@@ -1,0 +1,58 @@
+.join-code-input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6a0dad;
+  margin-top: 4vh;
+  color: #ffffff;
+  height: 10vh;
+  width: 60vw;
+  font-size: 6vh;
+  font-weight: normal;
+  border-radius: 2vh;
+  flex-wrap: nowrap;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+
+.join-code-input-wrapper-text {
+  margin-left: 2%;
+  flex-wrap: nowrap;
+}
+
+.join-code-input {
+  flex: 1;
+  padding: 1vh;
+  height: 5vh;
+  border: none;
+  border-radius: 2vh;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  font-family: "Roboto", sans-serif;
+  font-size: 4vh;
+  background-color: #d3d3d3;
+  outline: none;
+}
+
+.join-code-button {
+  background-color: #6a0dad;
+  border: none;
+  height: 100%;
+  width: auto;
+  border-radius: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.join-button-icon {
+  height: 80%;
+  width: auto;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.join-button-icon:hover {
+  transform: scale(1.05);
+}

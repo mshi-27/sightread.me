@@ -1,0 +1,15 @@
+.metronome {
+  position: absolute;
+  top: 65vh;
+  left: 10vw;
+  height: 15vh;
+  width: auto;
+}
+
+.metronome-2 {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  height: 20vh;
+  width: auto;
+}

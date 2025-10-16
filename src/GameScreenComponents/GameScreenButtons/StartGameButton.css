@@ -1,0 +1,19 @@
+.start-game-button {
+  width: 15vw;
+  height: 10vh;
+  font-size: 6vh;
+  color: white;
+  background-color: #6a0dad;
+  border-radius: 2vw;
+  border: none;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.start-game-button:hover {
+  transform: scale(1.05);
+}
+
+.fade-out {
+  opacity: 0%;
+  transform: scale(1.1);
+}

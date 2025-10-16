@@ -1,0 +1,57 @@
+.rhythm-selector {
+  display: flex;
+  align-items: center;
+  gap: 1vw; /* Space between label and boxes */
+  margin-left: 1vw;
+}
+
+.rhythm-boxes {
+  display: flex;
+  gap: 1vw; /* Space between boxes */
+}
+
+.rhythm-box {
+  opacity: 1;
+  width: 5vw;
+  height: 5vw;
+  border: 0.5vh solid #6a0dad;
+  border-radius: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.rhythm-box img {
+  width: auto;
+  height: 4vw;
+}
+
+.whole-note img {
+  width: 2vw;
+  height: auto;
+  align-self: flex-end;
+  margin-bottom: 1vh;
+}
+
+.half-note img {
+  height: 5vw;
+  width: auto;
+}
+
+.rhythm-box.selected {
+  border-color: #6a0dad;
+  background-color: #ffffff;
+}
+
+.rhythm-box.unselected {
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+.rhythm-box.disabled {
+  opacity: 0;
+  cursor: default;
+}
