@@ -1,7 +1,7 @@
 # sightread.me 🎵  
 **Live demo:** https://sightread.me
 
-![App demo](public/demo.gif)
+![App demo](media/demo.gif)
 
 A web app that helps musicians improve sight‑reading with **real‑time pitch detection**, **metronome guidance**, and **adaptive exercises**. Built with React, TypeScript, and Vite.
 
