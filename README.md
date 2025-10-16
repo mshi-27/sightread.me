@@ -14,6 +14,8 @@ A web app that helps musicians improve sight‑reading with **real‑time pitch 
 - 🎮 **Custom difficulty modes** and rule‑based melody generation  
 - ⚡ **Snappy UI** using React Query & modern hooks  
 
+🎹 **How it works:** Notes appear on screen — play them in real time to get instant pitch feedback.
+
 ## 🧱 Tech Stack
 **Frontend:** React + TypeScript + Vite  
 **Libraries:** VexFlow, Pitchy, Sonner, TanStack Query, React Router, lucide‑react
@@ -21,7 +23,6 @@ A web app that helps musicians improve sight‑reading with **real‑time pitch 
 ## 🧠 Backend (FastAPI)
 sightread.me uses a lightweight FastAPI backend that generates playable melodies 
 and serves them as JSON to the React frontend.
-
 For simplicity, the backend source code is not included in this public repository.  
 If you'd like to learn more about the API design or generation logic, feel free to reach out.
 
