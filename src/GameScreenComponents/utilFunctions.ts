@@ -157,9 +157,7 @@ function noteToFrequency(note: string) {
     "B",
   ];
   const a4 = 440;
-
-  // Parse the note and octave
-  note = note.replace("/", "");
+  note = note.replace("/", ""); // Parse the note and octave
   const regex = /^([A-G][b#]?)(-?\d+)$/; // Assert format of the note string
   const match = note.match(regex);
 
