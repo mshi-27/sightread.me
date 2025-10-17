@@ -1,13 +1,13 @@
 .rhythm-selector {
   display: flex;
   align-items: center;
-  gap: 1vw; /* Space between label and boxes */
+  gap: 1vw;
   margin-left: 1vw;
 }
 
 .rhythm-boxes {
   display: flex;
-  gap: 1vw; /* Space between boxes */
+  gap: 1vw;
 }
 
 .rhythm-box {
