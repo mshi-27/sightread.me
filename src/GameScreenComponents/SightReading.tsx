@@ -15,7 +15,7 @@ function useUrlQueryParams() {
   return new URLSearchParams(useLocation().search);
 }
 
-//SightReading component manages states for current sight reading session, handles game start, stop, scroll.
+// SightReading component manages states for current sight reading session, handles game start, stop, scroll.
 export default function SightReading() {
   const query = useUrlQueryParams();
   const navigate = useNavigate();
@@ -48,14 +48,13 @@ export default function SightReading() {
   const viewportRef = useRef<HTMLDivElement>(null); // Viewport div contains sheetmusicdivref
   const countdownRef = useRef<HTMLDivElement>(null); // Div for metronome countdown
   const strikesRef = useRef<HTMLDivElement>(null); // Div for displaying strikes (mistakes)
+  const lastRenderedMeasureRef = useRef<number>(0); // To render notes without repetition
   // States
   const [notes, setNotes] = useState<StaveNote[]>([]); // VexFlow StaveNotes
   const [noteElements, setNoteElements] = useState<SVGGElement[]>([]); // SVG Rendered Note Elements
   const [melody, setMelody] = useState<
     { pitch: string; octave: number; duration: string }[]
   >([]);
-  const lastRenderedMeasureRef = useRef<number>(0); // To render notes without repetition
-
   const [activeNotes, setActiveNotes] = useState<NoteCheck[]>([]); // NoteCheck objects {note, startTime, endTime, isCorrect}
   const [keySignature, setKeySignature] = useState<string>(initialKey);
   const [tempo, setTempo] = useState<number>(initialTempo); // Beats per minute
@@ -78,7 +77,7 @@ export default function SightReading() {
   const [resetMetronome, setResetMetronome] = useState(0);
   // Constants
   const bufferMeasures = 8; // Measures per melody fetch
-
+  
   // Custom hooks
   const { audioContext, initializeAudio } = useAudio({
     notes,
@@ -127,7 +126,6 @@ export default function SightReading() {
       );
       setMelody(randomMelody);
       setTotalMeasures(bufferMeasures);
-      //console.log(randomMelody)
     }
   }, [bufferMeasures, keySignature]);
 
