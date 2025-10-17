@@ -1,13 +1,13 @@
 .clef-selector {
   display: flex;
   align-items: center;
-  gap: 1vw; /* Space between label and boxes */
+  gap: 1vw;
   margin-left: 1vw;
 }
 
 .clef-boxes {
   display: flex;
-  gap: 1vw; /* Space between boxes */
+  gap: 1vw;
 }
 
 .clef-box {
@@ -35,7 +35,6 @@
 }
 
 .clef-box.selected {
-  /* Purple background */
   border-color: #6a0dad;
   background-color: #ffffff;
 }
