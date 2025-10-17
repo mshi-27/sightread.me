@@ -67,8 +67,7 @@ export default function useScroll({
     { id: number; index: number; time: number }[]
   >([]); // List of timeouts for scheduled scrolling
   const initialScrollRef = useRef<boolean>(true); // Boolean for initial scheduler call
-  // Ref to always hold the latest values
-  const activeNotesRef = useRef<NoteCheck[]>(activeNotes);
+  const activeNotesRef = useRef<NoteCheck[]>(activeNotes); // Ref to always hold the latest values
   const intervalTime = 60 / tempo;
   const lastMetronomeResetRef = useRef(0); // Number of notes since last metronome reset, reset after 100
   useEffect(() => {
