@@ -1,4 +1,3 @@
-// src/components/HomePage.js
 import { Play } from "lucide-react";
 import "./HomePage.css";
 import { AnimationContext } from "./MainScreen";
