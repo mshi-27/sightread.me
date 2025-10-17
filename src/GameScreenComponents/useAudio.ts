@@ -36,8 +36,10 @@ export default function useAudio({
   const dataArrayRef = useRef<Float32Array>(
     new Float32Array(audioInputSizeRef.current)
   ); // Stores frequencyBinCount
-  const [isProcessing, setIsProcessing] = useState<boolean>(false); // Used to determine if program is ready for processAudio, by determining availability of above 3 refs
-  const activeNotesRef = useRef<NoteCheck[]>(activeNotes); // Notes to be compared with audio input
+  // Used to determine if program is ready for processAudio by determining availability of above 3 refs
+  const [isProcessing, setIsProcessing] = useState<boolean>(false);
+   // Notes to be compared with audio input
+  const activeNotesRef = useRef<NoteCheck[]>(activeNotes);
   const scoreRef = useRef(score);
   const pitchyRef = useRef(
     PitchDetector.forFloat32Array(audioInputSizeRef.current)
@@ -152,7 +154,6 @@ export default function useAudio({
     activeNotesRef.current = newActiveNotes;
     setActiveNotes(newActiveNotes);
   }, [isProcessing, noteElements, notes]);
-  // Use ref/state for activenotes for real-time updating, use state for notes/noteelements since a bit of lag is ok.
 
   // Process audio, refresh interval so that processAudio doesn't use outdated values
   useEffect(() => {
